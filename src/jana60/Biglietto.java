@@ -20,15 +20,15 @@ public class Biglietto {
 
 	// attributi
 	private double chilometri;
-	private int et‡Passeggero;
+	private int etaPasseggero;
 	private double prezzo = 0.21;
 	private DecimalFormat df = new DecimalFormat("0.00 euro");
 
 	// costruttori
-	public Biglietto(double chilometri, int et‡Passeggero) {
+	public Biglietto(double chilometri, int etaPasseggero) {
 		super();
 		this.chilometri = chilometri;
-		this.et‡Passeggero = et‡Passeggero;
+		this.etaPasseggero = etaPasseggero;
 	}
 
 	// metodi getter e setter
@@ -41,29 +41,29 @@ public class Biglietto {
 	}
 
 	public int getEt‡Passeggero() {
-		return et‡Passeggero;
+		return etaPasseggero;
 	}
 
 	public void setEt‡Passeggero(int et‡Passeggero) {
-		this.et‡Passeggero = et‡Passeggero;
+		this.etaPasseggero = et‡Passeggero;
 	}
 
 	// metodi
-	double calcolaBiglietto() {
+	private double calcolaBiglietto() {
 		return chilometri * prezzo;
 	}
 
-	double importo() {
-		if (et‡Passeggero < 18) {
+	public double importo() {
+		if (etaPasseggero < 18) {
 			return (1 - 0.20) * calcolaBiglietto();
-		} else if (et‡Passeggero > 65) {
+		} else if (etaPasseggero > 65) {
 			return (1 - 0.40) * calcolaBiglietto();
 		} else {
 			return calcolaBiglietto();
 		}
 	}
 
-	String importoFormattato() {
+	public String importoFormattato() {
 		return df.format(importo());
 	}
 
