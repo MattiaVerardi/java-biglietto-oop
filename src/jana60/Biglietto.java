@@ -40,11 +40,11 @@ public class Biglietto {
 		this.chilometri = chilometri;
 	}
 
-	public int getEt‡Passeggero() {
+	public int getEtaPasseggero() {
 		return etaPasseggero;
 	}
 
-	public void setEt‡Passeggero(int et‡Passeggero) {
+	public void setEtaPasseggero(int et‡Passeggero) {
 		this.etaPasseggero = et‡Passeggero;
 	}
 
